@@ -150,8 +150,10 @@ def cource_average_rating(objs: list, cource: str) -> float:
         r_sum += sum(obj.grades[cource])
     return round((r_sum / r_num), 2)
 
+
 def student_average_rating(students: list, cource: str) -> float:
     return cource_average_rating(students, cource)
+
 
 def lecture_average_rating(lectures: list, cource: str) -> float:
    return cource_average_rating(lectures, cource)
@@ -228,4 +230,4 @@ if __name__ == "__main__":
 
     print("\n  ############## EX #4 ##############\n")
     print(student_average_rating([best_student, student], 'Psychology'))
-    print(student_average_rating([cool_lecture, lecture], 'Psychology'))
+    print(lecture_average_rating([cool_lecture, lecture], 'Psychology'))
